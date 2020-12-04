@@ -1,57 +1,42 @@
-# Project Name
+# Azure IoT Hub Data Plane MQTT 5 API Sample for C# (.NET) - Preview
 
-(short, 1-3 sentenced, description of the project)
+A sample showing how to use MQTT 5 API to interact with Azure IoT Hub.
 
 ## Features
 
-This project framework provides the following features:
+This sample highlights how to:
 
-* Feature 1
-* Feature 2
-* ...
+- Establish connection to Azure IoT Hub using MQTT 5
+- Send telemetry messages
+- Subscribe and handle C2D commands
+- Subscribe and handle Direct Method calls
+- Get and update Device Twin state
 
 ## Getting Started
 
 ### Prerequisites
 
-(ideally very short, if any)
+- Azure IoT Hub (Preview mode) with device created
+- .NET Core 3.1 SDK
 
-- OS
-- Library version
-- ...
+### Running a Sample
 
-### Installation
+- open `src` directory in terminal
+- Run sample application according to type of credentials:
+  - SAS based on client's symmetrical keys:
 
-(ideally very short)
+    `dotnet run -- <hostname> <client-id> -s <SAS-key>`
 
-- npm install [package name]
-- mvn install
-- ...
+  - X.509 certificate:
+  
+    `dotnet run -- <hostname> <client-id> -c <certificate-path> -w <certificate-password>`
 
-### Quickstart
-(Add steps to get up and running quickly)
+  - SAS based on IoT hub access policy:
 
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
+    `dotnet run -- <hostname> <client-id> -s <SAS-key> -p <policy-name>`
 
+For example,
 
-## Demo
+`dotnet run -- abc.azure-devices.net device1/module1 -s AAA...`
 
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+will run sample application, connect to `abc` IoT hub as `module1` module  `device1` device using SAS key `AAA...`.

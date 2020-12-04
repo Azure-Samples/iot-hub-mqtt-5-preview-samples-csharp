@@ -1,13 +1,5 @@
-## [project-title] Changelog
+# # Azure IoT Hub Data Plane MQTT 5 API Sample Changelog
 
-<a name="x.y.z"></a>
-# x.y.z (yyyy-mm-dd)
+## 0.1.0 (2020-12-03)
 
-*Features*
-* ...
-
-*Bug Fixes*
-* ...
-
-*Breaking Changes*
-* ...
+Initial commit
